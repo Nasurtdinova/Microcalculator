@@ -19,6 +19,8 @@
         <Label Content="Общая сумма выплаты" HorizontalAlignment="Left" Margin="265,338,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tbObSum" HorizontalAlignment="Left" Height="23" Margin="84,341,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <ListBox x:Name="lbScore" HorizontalAlignment="Left" Height="100" Margin="579,254,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="tbEffective" HorizontalAlignment="Left" Height="23" Margin="81,386,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Эффектная ставка" HorizontalAlignment="Left" Margin="265,383,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

@@ -40,24 +40,27 @@ namespace Microcalculator
                 string processing = new_array[j].Split(':')[1];
                 array2[j] = Convert.ToDouble(processing);
                 processings.Add(Convert.ToDouble(processing));
-                    
-                MessageBox.Show(processing);
+
             }
             double sumProcessing = 0;
             double obSum = 0;
-          
-            foreach (int i in processings)
+            double effect = 0;
+            for (int i = 0; i < Convert.ToInt32(tbSrok.Text)+1; i++)
             {
                 double toDoub = Convert.ToDouble(array2[i]);
                 sumProcessing = toDoub * 100 + sumProcessing;
                 obSum = sumProcessing + Convert.ToDouble(tbSum.Text);
-                if (i == Convert.ToInt32(tbSrok.Text))
-                {
-                    tbSumProcessing.Text = Convert.ToString(sumProcessing);
-                    tbObSum.Text = Convert.ToString(obSum);
-                }
-                
+                tbSumProcessing.Text = Convert.ToString(sumProcessing);
+                tbObSum.Text = Convert.ToString(obSum);
+ 
             }
+            lbScore.Items.Add(Convert.ToString(sumProcessing));
+            lbScore.Items.Add(Convert.ToString(obSum));
+            effect = sumProcessing / Convert.ToDouble(tbSum.Text) / Convert.ToInt32(tbSrok.Text);
+            tbEffective.Text = Convert.ToString(effect);
+            lbScore.Items.Add(Convert.ToString(effect));
+           
+
         }
 
         private void btnCalc_Click(object sender, RoutedEventArgs e)
