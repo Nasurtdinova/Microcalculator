@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,7 @@ namespace Microcalculator
         {
             InitializeComponent();
         }
+
         public void GetpProcessing()
         {
             string s = tbInterest.Text;
@@ -31,14 +33,13 @@ namespace Microcalculator
             for (int i = 0; i < s.Length; i++)
             {
                 new_array = s.Split(';');
-                
             }
             List <double> processings = new List<double>();
-            double[] array2 = new double[26];
+            double[] new_array2 = new double[26];
             for (int j = 0; j < new_array.Length-1; j++)
             {
                 string processing = new_array[j].Split(':')[1];
-                array2[j] = Convert.ToDouble(processing);
+                new_array2[j] = Convert.ToDouble(processing);
                 processings.Add(Convert.ToDouble(processing));
 
             }
@@ -47,7 +48,7 @@ namespace Microcalculator
             double effect = 0;
             for (int i = 0; i < Convert.ToInt32(tbSrok.Text)+1; i++)
             {
-                double toDoub = Convert.ToDouble(array2[i]);
+                double toDoub = Convert.ToDouble(new_array2[i]);
                 sumProcessing = toDoub * 100 + sumProcessing;
                 obSum = sumProcessing + Convert.ToDouble(tbSum.Text);
                 tbSumProcessing.Text = Convert.ToString(sumProcessing);
@@ -59,8 +60,6 @@ namespace Microcalculator
             effect = sumProcessing / Convert.ToDouble(tbSum.Text) / Convert.ToInt32(tbSrok.Text);
             tbEffective.Text = Convert.ToString(effect);
             lbScore.Items.Add(Convert.ToString(effect));
-           
-
         }
 
         private void btnCalc_Click(object sender, RoutedEventArgs e)
@@ -79,9 +78,9 @@ namespace Microcalculator
 
         private void btnLoad_Click(object sender, RoutedEventArgs e)
         {
-            using (System.IO.StreamReader sr = new System.IO.StreamReader(@"C:\Users\201914\Desktop\calc\load.txt"))
+            using (System.IO.StreamReader sw = new System.IO.StreamReader(@"C:\Users\201914\Desktop\calc\load.txt"))
             {
-                tbInterest.Text = sr.ReadLine();
+                tbInterest.Text = sw.ReadLine();
             }
         }
     }

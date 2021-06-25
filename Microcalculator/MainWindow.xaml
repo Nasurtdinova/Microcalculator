@@ -14,14 +14,14 @@
         <TextBox x:Name="tbSrok" HorizontalAlignment="Left" Height="23" Margin="51,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"/>
         <Label Content="Введите срок займа" HorizontalAlignment="Left" Margin="265,171,0,0" VerticalAlignment="Top" Width="132"/>
         <Button x:Name="btnCalc" Content="Считать" HorizontalAlignment="Left" Margin="129,225,0,0" VerticalAlignment="Top" Width="75" Click="btnCalc_Click"/>
-        <TextBox x:Name="tbSumProcessing" HorizontalAlignment="Left" Height="23" Margin="81,287,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Сумма процентов" HorizontalAlignment="Left" Margin="265,287,0,0" VerticalAlignment="Top"/>
-        <Label Content="Общая сумма выплаты" HorizontalAlignment="Left" Margin="265,338,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbObSum" HorizontalAlignment="Left" Height="23" Margin="84,341,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <ListBox x:Name="lbScore" HorizontalAlignment="Left" Height="100" Margin="579,254,0,0" VerticalAlignment="Top" Width="100"/>
-        <TextBox x:Name="tbEffective" HorizontalAlignment="Left" Height="23" Margin="81,386,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Эффектная ставка" HorizontalAlignment="Left" Margin="265,383,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="594,383,0,0" VerticalAlignment="Top" Width="75" Click="btnSave_Click"/>
+        <TextBox x:Name="tbSumProcessing" HorizontalAlignment="Left" Height="23" Margin="54,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <Label Content="Сумма процентов" HorizontalAlignment="Left" Margin="264,272,0,0" VerticalAlignment="Top"/>
+        <Label Content="Общая сумма выплаты" HorizontalAlignment="Left" Margin="260,320,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbObSum" HorizontalAlignment="Left" Height="23" Margin="51,323,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <ListBox x:Name="lbScore" HorizontalAlignment="Left" Height="100" Margin="512,264,0,0" VerticalAlignment="Top" Width="122"/>
+        <TextBox x:Name="tbEffective" HorizontalAlignment="Left" Height="23" Margin="51,380,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147"/>
+        <Label Content="Эффектная ставка" HorizontalAlignment="Left" Margin="264,377,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="536,380,0,0" VerticalAlignment="Top" Width="75" Click="btnSave_Click"/>
         <Button x:Name="btnLoad" Content="Load" HorizontalAlignment="Left" Margin="523,110,0,0" VerticalAlignment="Top" Width="75" Click="btnLoad_Click"/>
 
     </Grid>
