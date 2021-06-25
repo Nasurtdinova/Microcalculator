@@ -67,5 +67,22 @@ namespace Microcalculator
         {
             GetpProcessing();
         }
+
+        private void btnSave_Click(object sender, RoutedEventArgs e)
+        {
+            using (System.IO.StreamWriter sw = new System.IO.StreamWriter(@"C:\Users\201914\Desktop\calc\save.txt"))
+            {
+                for (int i = 0; i < lbScore.Items.Count; i++)
+                    sw.WriteLine(lbScore.Items[i].ToString());
+            }
+        }
+
+        private void btnLoad_Click(object sender, RoutedEventArgs e)
+        {
+            using (System.IO.StreamReader sr = new System.IO.StreamReader(@"C:\Users\201914\Desktop\calc\load.txt"))
+            {
+                tbInterest.Text = sr.ReadLine();
+            }
+        }
     }
 }
