@@ -1,0 +1,18 @@
+﻿<Window x:Class="Microcalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Microcalculator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="tbInterest" HorizontalAlignment="Left" Height="23" Margin="51,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"/>
+        <Label Content="Введите день:ставка" HorizontalAlignment="Left" Margin="265,55,0,0" VerticalAlignment="Top" Width="132"/>
+        <TextBox x:Name="tbSum" HorizontalAlignment="Left" Height="23" Margin="51,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"/>
+        <Label Content="Введите сумму займа" HorizontalAlignment="Left" Margin="265,110,0,0" VerticalAlignment="Top" Width="132"/>
+        <TextBox x:Name="tbSrok" HorizontalAlignment="Left" Height="23" Margin="51,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"/>
+        <Label Content="Введите срок займа" HorizontalAlignment="Left" Margin="265,171,0,0" VerticalAlignment="Top" Width="132"/>
+
+    </Grid>
+</Window>
