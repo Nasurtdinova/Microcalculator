@@ -23,13 +23,28 @@ namespace Microcalculator
         public MainWindow()
         {
             InitializeComponent();
-            Dictionary<int, string> interestByDay = new Dictionary<int, string>(35);
-            interestByDay.Add(1, "Russia");
-            interestByDay.Add(3, "Great Britain");
-            interestByDay.Add(2, "USA");
-            interestByDay.Add(4, "France");
-            interestByDay.Add(5, "China");
+          
+
+        }
+        public void GetpProcessing()
+        {
+            string s = tbInterest.Text;
+            string[] new_array = s.Split(';');
+
+            
+            string day = new_array[0].Split(':')[0];
+            string processing = new_array[0].Split(':')[1];
+            if (day == tbSrok.Text)
+            {
+
+            }
+            MessageBox.Show(day);
+            MessageBox.Show(processing);
         }
 
+        private void btnCalc_Click(object sender, RoutedEventArgs e)
+        {
+            GetpProcessing();
+        }
     }
 }

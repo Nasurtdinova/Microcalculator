@@ -13,6 +13,7 @@
         <Label Content="Введите сумму займа" HorizontalAlignment="Left" Margin="265,110,0,0" VerticalAlignment="Top" Width="132"/>
         <TextBox x:Name="tbSrok" HorizontalAlignment="Left" Height="23" Margin="51,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"/>
         <Label Content="Введите срок займа" HorizontalAlignment="Left" Margin="265,171,0,0" VerticalAlignment="Top" Width="132"/>
+        <Button x:Name="btnCalc" Content="Считать" HorizontalAlignment="Left" Margin="129,225,0,0" VerticalAlignment="Top" Width="75" Click="btnCalc_Click"/>
 
     </Grid>
 </Window>
