@@ -23,23 +23,47 @@ namespace Microcalculator
         public MainWindow()
         {
             InitializeComponent();
-          
-
         }
         public void GetpProcessing()
         {
             string s = tbInterest.Text;
-            string[] new_array = s.Split(';');
-
-            
-            string day = new_array[0].Split(':')[0];
-            string processing = new_array[0].Split(':')[1];
-            if (day == tbSrok.Text)
+            string[] new_array = new string[25];
+            for (int i = 0; i < s.Length; i++)
             {
+                new_array = s.Split(';');
+                
+            }
+            string[] array2 = new string[25];
+            for (int j = 0; j < new_array.Length-1; j++)
+            {
+                string processing = new_array[j].Split(':')[1];
+                array2[j] = processing;
+                MessageBox.Show(processing);
+            }
+            int sumProcessing = 0;
+            for (int k = 1; k < array2.Length + 1; k++)
+            {
+                
+                sumProcessing = Convert.ToInt32(array2[k]) * 100 + sumProcessing;
+                //if (k == Convert.ToInt32(tbSrok.Text))
+                //{
+                //    tbSumProcessing.Text = Convert.ToString(sumProcessing);
+                //}
 
             }
-            MessageBox.Show(day);
-            MessageBox.Show(processing);
+
+
+
+
+
+            //string day = new_array[0].Split(':')[0];
+            //string processing = new_array[0].Split(':')[1];
+            //if (day == tbSrok.Text)
+            //{
+            //    int r = Convert.ToInt32(tbSumProcessing.Text);
+            //    r = Convert.ToInt32(tbSum.Text) * Convert.ToInt32(processing);
+            //}
+
         }
 
         private void btnCalc_Click(object sender, RoutedEventArgs e)
